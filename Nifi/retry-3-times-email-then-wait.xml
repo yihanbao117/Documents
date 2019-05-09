@@ -1,0 +1,552 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.0">
+  <description></description>
+  <groupId>445dad97-0157-1000-862c-f4589d6b2fed</groupId>
+  <name>Retry 3 Times, Email, then Wait</name>
+  <snippet>
+    <processGroups>
+      <id>f14fc98d-919f-4eb3-0000-000000000000</id>
+      <parentGroupId>445dad97-0157-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>0.0</y>
+      </position>
+      <comments></comments>
+      <contents>
+        <connections>
+          <id>f1dc14c0-9885-43af-0000-000000000000</id>
+          <parentGroupId>f14fc98d-919f-4eb3-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>0 MB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>0</backPressureObjectThreshold>
+          <destination>
+            <groupId>f14fc98d-919f-4eb3-0000-000000000000</groupId>
+            <id>1efaa5e5-d5cb-43b3-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>failure</selectedRelationships>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>f14fc98d-919f-4eb3-0000-000000000000</groupId>
+            <id>873c0fc0-db81-4375-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>03b9cf85-8863-4ee9-0000-000000000000</id>
+          <parentGroupId>f14fc98d-919f-4eb3-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>0 MB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>0</backPressureObjectThreshold>
+          <destination>
+            <groupId>f14fc98d-919f-4eb3-0000-000000000000</groupId>
+            <id>873c0fc0-db81-4375-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>email</selectedRelationships>
+          <source>
+            <groupId>f14fc98d-919f-4eb3-0000-000000000000</groupId>
+            <id>e74fe416-9ad7-495c-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>2c995e0b-ab62-48ce-0000-000000000000</id>
+          <parentGroupId>f14fc98d-919f-4eb3-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>0 MB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>0</backPressureObjectThreshold>
+          <destination>
+            <groupId>f14fc98d-919f-4eb3-0000-000000000000</groupId>
+            <id>e74fe416-9ad7-495c-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>f14fc98d-919f-4eb3-0000-000000000000</groupId>
+            <id>58678327-2f1a-4a97-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>3e1a8d18-c02b-4e69-0000-000000000000</id>
+          <parentGroupId>f14fc98d-919f-4eb3-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>0 MB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>0</backPressureObjectThreshold>
+          <destination>
+            <groupId>f14fc98d-919f-4eb3-0000-000000000000</groupId>
+            <id>58678327-2f1a-4a97-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <source>
+            <groupId>f14fc98d-919f-4eb3-0000-000000000000</groupId>
+            <id>70505f8f-ab46-4d01-0000-000000000000</id>
+            <type>INPUT_PORT</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>40016ba7-633f-4a03-0000-000000000000</id>
+          <parentGroupId>f14fc98d-919f-4eb3-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>0 MB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>0</backPressureObjectThreshold>
+          <destination>
+            <groupId>f14fc98d-919f-4eb3-0000-000000000000</groupId>
+            <id>fafca74e-772a-41f7-0000-000000000000</id>
+            <type>OUTPUT_PORT</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>f14fc98d-919f-4eb3-0000-000000000000</groupId>
+            <id>1efaa5e5-d5cb-43b3-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>5b3f0bae-15e6-4ff5-0000-000000000000</id>
+          <parentGroupId>f14fc98d-919f-4eb3-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>0 MB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>0</backPressureObjectThreshold>
+          <destination>
+            <groupId>f14fc98d-919f-4eb3-0000-000000000000</groupId>
+            <id>fafca74e-772a-41f7-0000-000000000000</id>
+            <type>OUTPUT_PORT</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>unmatched</selectedRelationships>
+          <source>
+            <groupId>f14fc98d-919f-4eb3-0000-000000000000</groupId>
+            <id>e74fe416-9ad7-495c-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <inputPorts>
+          <id>70505f8f-ab46-4d01-0000-000000000000</id>
+          <parentGroupId>f14fc98d-919f-4eb3-0000-000000000000</parentGroupId>
+          <position>
+            <x>1773.935302734375</x>
+            <y>176.5811999511719</y>
+          </position>
+          <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+          <name>input</name>
+          <state>STOPPED</state>
+          <type>INPUT_PORT</type>
+        </inputPorts>
+        <outputPorts>
+          <id>fafca74e-772a-41f7-0000-000000000000</id>
+          <parentGroupId>f14fc98d-919f-4eb3-0000-000000000000</parentGroupId>
+          <position>
+            <x>1771.773681640625</x>
+            <y>289.53806152343753</y>
+          </position>
+          <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+          <name>retry</name>
+          <state>STOPPED</state>
+          <type>OUTPUT_PORT</type>
+        </outputPorts>
+        <processors>
+          <id>873c0fc0-db81-4375-0000-000000000000</id>
+          <parentGroupId>f14fc98d-919f-4eb3-0000-000000000000</parentGroupId>
+          <position>
+            <x>2294.919189453125</x>
+            <y>359.614892578125</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>SMTP Hostname</key>
+                <value>
+                  <name>SMTP Hostname</name>
+                </value>
+              </entry>
+              <entry>
+                <key>SMTP Port</key>
+                <value>
+                  <name>SMTP Port</name>
+                </value>
+              </entry>
+              <entry>
+                <key>SMTP Username</key>
+                <value>
+                  <name>SMTP Username</name>
+                </value>
+              </entry>
+              <entry>
+                <key>SMTP Password</key>
+                <value>
+                  <name>SMTP Password</name>
+                </value>
+              </entry>
+              <entry>
+                <key>SMTP Auth</key>
+                <value>
+                  <name>SMTP Auth</name>
+                </value>
+              </entry>
+              <entry>
+                <key>SMTP TLS</key>
+                <value>
+                  <name>SMTP TLS</name>
+                </value>
+              </entry>
+              <entry>
+                <key>SMTP Socket Factory</key>
+                <value>
+                  <name>SMTP Socket Factory</name>
+                </value>
+              </entry>
+              <entry>
+                <key>SMTP X-Mailer Header</key>
+                <value>
+                  <name>SMTP X-Mailer Header</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Content Type</key>
+                <value>
+                  <name>Content Type</name>
+                </value>
+              </entry>
+              <entry>
+                <key>From</key>
+                <value>
+                  <name>From</name>
+                </value>
+              </entry>
+              <entry>
+                <key>To</key>
+                <value>
+                  <name>To</name>
+                </value>
+              </entry>
+              <entry>
+                <key>CC</key>
+                <value>
+                  <name>CC</name>
+                </value>
+              </entry>
+              <entry>
+                <key>BCC</key>
+                <value>
+                  <name>BCC</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Subject</key>
+                <value>
+                  <name>Subject</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Message</key>
+                <value>
+                  <name>Message</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Attach File</key>
+                <value>
+                  <name>Attach File</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Include All Attributes In Message</key>
+                <value>
+                  <name>Include All Attributes In Message</name>
+                </value>
+              </entry>
+            </descriptors>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>SMTP Hostname</key>
+                <value>myhost.com</value>
+              </entry>
+              <entry>
+                <key>SMTP Port</key>
+                <value>25</value>
+              </entry>
+              <entry>
+                <key>SMTP Username</key>
+              </entry>
+              <entry>
+                <key>SMTP Password</key>
+              </entry>
+              <entry>
+                <key>SMTP Auth</key>
+                <value>true</value>
+              </entry>
+              <entry>
+                <key>SMTP TLS</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>SMTP Socket Factory</key>
+                <value>javax.net.ssl.SSLSocketFactory</value>
+              </entry>
+              <entry>
+                <key>SMTP X-Mailer Header</key>
+                <value>NiFi</value>
+              </entry>
+              <entry>
+                <key>Content Type</key>
+                <value>text/plain</value>
+              </entry>
+              <entry>
+                <key>From</key>
+                <value>nifi@myhost.com</value>
+              </entry>
+              <entry>
+                <key>To</key>
+                <value>admin@myhost.com</value>
+              </entry>
+              <entry>
+                <key>CC</key>
+              </entry>
+              <entry>
+                <key>BCC</key>
+              </entry>
+              <entry>
+                <key>Subject</key>
+                <value>Message from NiFi</value>
+              </entry>
+              <entry>
+                <key>Message</key>
+                <value>Error ______</value>
+              </entry>
+              <entry>
+                <key>Attach File</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Include All Attributes In Message</key>
+                <value>false</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>PutEmail</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.PutEmail</type>
+        </processors>
+        <processors>
+          <id>e74fe416-9ad7-495c-0000-000000000000</id>
+          <parentGroupId>f14fc98d-919f-4eb3-0000-000000000000</parentGroupId>
+          <position>
+            <x>2292.1728515625</x>
+            <y>179.84168212890626</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Routing Strategy</key>
+                <value>
+                  <name>Routing Strategy</name>
+                </value>
+              </entry>
+              <entry>
+                <key>email</key>
+                <value>
+                  <name>email</name>
+                </value>
+              </entry>
+            </descriptors>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Routing Strategy</key>
+                <value>Route to Property name</value>
+              </entry>
+              <entry>
+                <key>email</key>
+                <value>${retryCount:gt(3)}</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>Route On Retry Threshold</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>email</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>unmatched</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+        </processors>
+        <processors>
+          <id>1efaa5e5-d5cb-43b3-0000-000000000000</id>
+          <parentGroupId>f14fc98d-919f-4eb3-0000-000000000000</parentGroupId>
+          <position>
+            <x>2013.0869140625</x>
+            <y>544.2190051269531</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Delete Attributes Expression</key>
+                <value>
+                  <name>Delete Attributes Expression</name>
+                </value>
+              </entry>
+              <entry>
+                <key>retryCount</key>
+                <value>
+                  <name>retryCount</name>
+                </value>
+              </entry>
+            </descriptors>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Delete Attributes Expression</key>
+              </entry>
+              <entry>
+                <key>retryCount</key>
+                <value>0</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>retryCount=0</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
+        </processors>
+        <processors>
+          <id>58678327-2f1a-4a97-0000-000000000000</id>
+          <parentGroupId>f14fc98d-919f-4eb3-0000-000000000000</parentGroupId>
+          <position>
+            <x>2095.60302734375</x>
+            <y>-4.514922618865967</y>
+          </position>
+          <config>
+            <annotationData>&lt;criteria&gt;
+    &lt;flowFilePolicy&gt;USE_CLONE&lt;/flowFilePolicy&gt;
+    &lt;rules&gt;
+        &lt;actions&gt;
+            &lt;attribute&gt;retryCount&lt;/attribute&gt;
+            &lt;id&gt;fc5de9d9-e9d8-4724-9026-adc251e64664&lt;/id&gt;
+            &lt;value&gt;${retryCount:plus(1)}&lt;/value&gt;
+        &lt;/actions&gt;
+        &lt;conditions&gt;
+            &lt;expression&gt;${retryCount:gt(0)}&lt;/expression&gt;
+            &lt;id&gt;1bcb0886-548b-487b-b9c9-2f5be4a9f22d&lt;/id&gt;
+        &lt;/conditions&gt;
+        &lt;id&gt;ba69ad76-528d-4b64-856d-97f8b75335d0&lt;/id&gt;
+        &lt;name&gt;initialized&lt;/name&gt;
+    &lt;/rules&gt;
+    &lt;rules&gt;
+        &lt;actions&gt;
+            &lt;attribute&gt;retryCount&lt;/attribute&gt;
+            &lt;id&gt;12438de1-4484-48d2-8406-902e2eeec5df&lt;/id&gt;
+            &lt;value&gt;1&lt;/value&gt;
+        &lt;/actions&gt;
+        &lt;conditions&gt;
+            &lt;expression&gt;${retryCount:gt(0):not()}&lt;/expression&gt;
+            &lt;id&gt;8d23dd53-24ba-4ae1-99a5-5fff51f24653&lt;/id&gt;
+        &lt;/conditions&gt;
+        &lt;id&gt;fd96e132-5298-4835-9304-dd718bed1a3b&lt;/id&gt;
+        &lt;name&gt;uninitialized&lt;/name&gt;
+    &lt;/rules&gt;
+&lt;/criteria&gt;</annotationData>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Delete Attributes Expression</key>
+                <value>
+                  <name>Delete Attributes Expression</name>
+                </value>
+              </entry>
+              <entry>
+                <key>retryCount</key>
+                <value>
+                  <name>retryCount</name>
+                </value>
+              </entry>
+            </descriptors>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Delete Attributes Expression</key>
+              </entry>
+              <entry>
+                <key>retryCount</key>
+                <value>${retryCount:plus(1)}</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>Set/Increment retryCount</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
+        </processors>
+      </contents>
+      <name>Retry 3 Times, Email, then Wait</name>
+    </processGroups>
+  </snippet>
+  <timestamp>09/22/2016 20:05:06 PDT</timestamp>
+</template>
